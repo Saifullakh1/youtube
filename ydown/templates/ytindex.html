@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+{% block content %}
+<!-- container start here -->
+<div class="container">
+
+    <br><br>
+    <center><h1> Enter youtube Video Link Here </h1></center>
+    <!-- form start here -->
+    <form action="download/" method="post">
+        {% csrf_token %}
+        <br>
+        <div class="form-group">
+            <input name="ylink" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                   placeholder="Enter Your Selected Youtube Video Link.">
+            <small id="emailHelp" class="form-text text-muted"></small>
+        </div>
+        <br>
+        <center>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </center>
+    </form>
+    <!-- form end here -->
+</div>
+
+<!-- container end here -->
+{% endblock %}
